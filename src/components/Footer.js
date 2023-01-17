@@ -3,16 +3,15 @@ import {FaTwitter, FaInstagram, FaFacebook, FaYoutube, FaLinkedin} from 'react-i
 
 const Footer = () => {
   return (
-    <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-black bg-gray-300">
-        <h1 className="w-full text-3xl font-bold">PharmRx</h1>
-        <p className="py-4">PharmRx has been the most trusted website for patients to get and receive their medications and book their vaccination appointment.</p>
-        <div className="flex justify-between md:w-[75%] my-6">
-            <FaTwitter className="text-blue-500" size={30}/>
-            <FaInstagram size={30}/>
-            <FaFacebook className="text-blue-800" size={30}/>
-            <FaYoutube className="text-red-500" size={30}/>
-            <FaLinkedin className="text-blue-800" size={30}/>
+    <div>
+        <div className="w-full h-[80px] px-4 flex justify-center items-center gap-8">
+            <FaTwitter className="text-blue-500 cursor-pointer" size={30}/>
+            <FaInstagram className="cursor-pointer" size={30}/>
+            <FaFacebook className="text-blue-800 cursor-pointer" size={30}/>
+            <FaYoutube className="text-red-500 cursor-pointer" size={30}/>
+            <FaLinkedin className="text-blue-800 cursor-pointer" size={30}/>
         </div>
+        <p className="text-center my-2 mb-7">All rights with <span className="underline text-blue-400 cursor-pointer">Sean&Shah</span></p>
     </div>
   )
 }
