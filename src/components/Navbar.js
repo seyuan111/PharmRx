@@ -16,9 +16,9 @@ const Navbar = () => {
             <div className="hidden md:flex">
                 <ul className="flex text-white items-center">
                     <li className="ml-4 cursor-pointer"><Link to="/about">About</Link></li>
-                    <li className="ml-4 cursor-pointer"><Link to="/vaccination">Vaccination</Link></li>
-                    <li className="ml-4 cursor-pointer">NewsLetter</li>
-                    <li className="ml-4 cursor-pointer">Contact</li>
+                    <li className="ml-4 cursor-pointer"><Link to="/refill">Refill</Link></li>
+                    <li className="ml-4 cursor-pointer"><Link to="/shop">Shop</Link></li>
+                    <li className="ml-4 cursor-pointer"><Link to="/contact">Contact</Link></li>
                     <button className="ml-4 cursor-pointer">Go to Medication</button>
                 </ul>
             </div>
@@ -28,9 +28,9 @@ const Navbar = () => {
             <div className={nav ? "w-full bg-black text-white absolute top-[90px] left-0 flex justify-center text-center" : "absolute left-[-100%]"}>
             <ul>
                 <li className="mb-4 text-xl"><Link to="/About">About</Link></li>
-                <li className="mb-4 text-xl">Vaccination</li>
-                <li className="mb-4 text-xl">NewsLetter</li>
-                <li className="mb-4 text-xl">Contact</li>
+                <li className="mb-4 text-xl"><Link to="/refill">Refill</Link></li>
+                <li className="mb-4 text-xl"><Link to="/shop">Shop</Link></li>
+                <li className="mb-4 text-xl"><Link to="/contact">Contact</Link></li>
                 <button className="m-8">Go to Medication</button>
             </ul>
             </div>

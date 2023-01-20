@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import About from './Pages/About'
 import Vaccination from './Pages/Vaccination'
+import FAQ from './Pages/FAQ'
+import Refill from './Pages/Refill'
+import Shop from './Pages/Shop'
+import Contact from './Pages/Contact'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -24,6 +28,22 @@ const router = createBrowserRouter([
   {
     path: "vaccination",
     element: <Vaccination />,
+  },
+  {
+    path: "faq",
+    element: <FAQ />
+  },
+  {
+    path: "refill",
+    element: <Refill />
+  },
+  {
+    path: "shop",
+    element: <Shop />
+  },
+  {
+    path: "contact",
+    element: <Contact />
   }
 ]);
 
