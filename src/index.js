@@ -8,6 +8,8 @@ import FAQ from './Pages/FAQ'
 import Refill from './Pages/Refill'
 import Shop from './Pages/Shop'
 import Contact from './Pages/Contact'
+import Login from './Pages/Login'
+import Signup from './Pages/SignUp'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
   {
     path: "contact",
     element: <Contact />
+  },
+  {
+    path: "login",
+    element: <Login />
+  },
+  {
+    path: "signup",
+    element: <Signup />
   }
 ]);
 

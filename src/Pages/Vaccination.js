@@ -9,7 +9,7 @@ const Vaccination = () => {
         setNav(!nav)
     }
   return (
-    <div className="w-full h-[90px] bg-white">
+    <div className="w-full h-[75px] bg-gray-200">
     <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
     <div className="text-[teal] cursor-pointer">
         <h1><Link to='/'>PharmRx</Link></h1>
@@ -20,7 +20,7 @@ const Vaccination = () => {
             <li className="ml-4 cursor-pointer"><Link to="/refill">Refill</Link></li>
             <li className="ml-4 cursor-pointer"><Link to="/shop">Shop</Link></li>
             <li className="ml-4 cursor-pointer"><Link to="/contact">Contact</Link></li>
-            <button className="ml-4 cursor-pointer">Go to Medication</button>
+            <button className="ml-4 cursor-pointer"><Link to="/login">Sign in</Link></button>
         </ul>
     </div>
     <div onClick={handleNav} className="block md:hidden">
@@ -32,7 +32,7 @@ const Vaccination = () => {
         <li className="mb-4 text-xl"><Link to="/refill">Refill</Link></li>
         <li className="mb-4 text-xl"><Link to="/shop">Shop</Link></li>
         <li className="mb-4 text-xl"><Link to="/contact">Contact</Link></li>
-        <button className="m-8">Go to Medication</button>
+        <button className="m-8"><Link to="/login">Sign in</Link></button>
     </ul>
     </div>
     </div>
