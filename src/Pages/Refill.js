@@ -40,11 +40,11 @@ const Refill = () => {
     </div>
     </div>
 
-    <div className="w-full h-[90vh] top-[90px]">
+    <div className="w-full h-screen top-[90px] bg-zinc-900/50">
       <img src={Medications} className="w-full h-full object-cover absolute -z-10" />
-      <div className="w-full h-[90%] text-center flex flex-col justify-center items-center text-black px-4">
+      <div className="w-full h-[90%] text-center flex flex-col justify-center items-center text-white px-4">
         <h1 className="text-[40px]">Need to refill or transfer your medications?</h1>
-        <div className="text-black mt-6 text-[20px]">
+        <div className="text-white mt-6 text-[20px]">
           <button>Refill my medications</button>
           <button className="ml-6">Transfer my medications</button>
         </div>

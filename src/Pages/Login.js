@@ -43,12 +43,12 @@ const Login = () => {
             <form className="max-w-[400px] w-full mx-auto bg-white p-8">
                 <h2 className="text-4xl font-bold text-center py-8 relative">PharmRx Login</h2>
                 <div className="flex flex-col mb-4">
-                    <label className="relative mb-2">Username</label>
-                    <input className="border relative bg-gray-100 p-2" type="text"></input>
+                    <label className="relative mb-2">Username:</label>
+                    <input className="border relative bg-gray-100 p-2" type="text" placeholder="Username"></input>
                 </div>
                 <div className="flex flex-col">
-                    <label className="relative mb-2">Password</label>
-                    <input className="border relative bg-gray-100 p-2" type="password"></input>
+                    <label className="relative mb-2">Password:</label>
+                    <input className="border relative bg-gray-100 p-2" type="password" placeholder="password"></input>
                 </div>
                 <button className="w-full py-3 mt-8 bg-blue-400 hover:bg-blue-800 relative text-black hover:text-white cursor-pointer">Sign in</button>
                 <p className="relative"><input className="mr-2 relative" type="checkbox"></input>Remember this account</p>

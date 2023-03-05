@@ -43,20 +43,20 @@ const SignUp = () => {
             <form className="max-w-[400px] w-full mx-auto bg-white p-8">
                 <h2 className="text-4xl font-bold text-center py-8 relative">PharmRx Sign Up</h2>
                 <div className="flex flex-col mb-4">
-                    <label className="relative mb-2">Email</label>
-                    <input className="border relative bg-gray-100 p-2" type="text"></input>
+                    <label className="relative mb-2">Email:</label>
+                    <input className="border relative bg-gray-100 p-2" type="text" placeholder="email"></input>
                 </div>
                 <div className="flex flex-col mb-4">
-                    <label className="relative mb-2">Username</label>
-                    <input className="border relative bg-gray-100 p-2" type="text"></input>
+                    <label className="relative mb-2">Username:</label>
+                    <input className="border relative bg-gray-100 p-2" type="text" placeholder="username"></input>
                 </div>
                 <div className="flex flex-col">
-                    <label className="relative mb-2">Password</label>
-                    <input className="border relative bg-gray-100 p-2" type="password"></input>
+                    <label className="relative mb-2">Password:</label>
+                    <input className="border relative bg-gray-100 p-2" type="password" placeholder="password"></input>
                 </div>
                 <div className="flex flex-col">
-                    <label className="relative mb-2">Confirm Password</label>
-                    <input className="border relative bg-gray-100 p-2" type="password"></input>
+                    <label className="relative mb-2">Confirm Password:</label>
+                    <input className="border relative bg-gray-100 p-2" type="password" placeholder="confirm password"></input>
                 </div>
                 <button className="w-full py-3 mt-8 bg-blue-400 hover:bg-blue-800 relative text-black hover:text-white cursor-pointer">Sign Up</button> 
             </form>
