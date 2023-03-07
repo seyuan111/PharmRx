@@ -1,9 +1,12 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import Medications from '../assets/Medications.jpg'
+import {BiArrowBack} from 'react-icons/bi'
+import { useParams, useNavigate } from 'react-router-dom'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
 const SignUp = () => {
+    const back = useNavigate()
     const [nav, setNav] = useState(false)
     const handleNav = () => {
         setNav(!nav)
@@ -41,6 +44,7 @@ const SignUp = () => {
         <img className="absolute w-full h-full object-cover mix-blend-overlay" src={Medications} alt="" />
         <div className="flex justify-center items-center h-full">
             <form className="max-w-[400px] w-full mx-auto bg-white p-8">
+            <BiArrowBack onClick={() => back(-1)} className="cursor-pointer text-[20px]" />
                 <h2 className="text-4xl font-bold text-center py-8 relative">PharmRx Sign Up</h2>
                 <div className="flex flex-col mb-4">
                     <label className="relative mb-2">Email:</label>
