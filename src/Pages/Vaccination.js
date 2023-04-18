@@ -43,7 +43,7 @@ const Vaccination = () => {
         <h1>Schedule your appointment</h1>
         <h3 className="text-white text-[20px]">Enter appointment date below</h3>
         <div className="flex flex-col sm:flex-row items-center justify-between w-50">
-        <input className="p-3 flex w-full rounded-md text-white" type="email" placeholder="Enter appointment date" />
+        <input className="p-3 flex w-full rounded-md text-black" type="email" placeholder="Enter appointment date" />
         <button className="bg-blue-300 text-white rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3">Enter</button>
       </div>
     </div>
