@@ -7,9 +7,9 @@
         @apply text-3xl font-bold
     }
     li {
-        @apply px-4 bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-3 rounded-3xl
+        @apply px-4 border-2 hover:bg-black py-3 rounded-2xl
     }
     button {
-        @apply bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-3 rounded-3xl
+        @apply border-2 px-5 py-3 rounded-2xl
     }
 }

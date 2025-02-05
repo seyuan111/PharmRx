@@ -10,6 +10,8 @@ import Shop from './Pages/Shop'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import Signup from './Pages/SignUp'
+import Delivery from './Pages/Delivery'
+import Checkout from './Pages/Checkout'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -36,8 +38,16 @@ const router = createBrowserRouter([
     element: <FAQ />
   },
   {
+    path: "delivery",
+    element: <Delivery />
+  },
+  {
     path: "refill",
     element: <Refill />
+  },
+  {
+    path: "checkout",
+    element: <Checkout />
   },
   {
     path: "shop",
