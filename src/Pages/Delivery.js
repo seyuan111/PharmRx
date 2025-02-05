@@ -16,7 +16,7 @@ const Delivery = () => {
       <div className="w-full min-h-screen flex flex-col justify-center items-center px-6 pt-24">
         <h1 className="text-3xl font-bold text-white mb-6 text-center">Enter Your Address for Delivery</h1>
 
-        <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
+        <form onSubmit={handleSubmit} className="border-2 shadow-lg rounded-lg p-6 max-w-md w-full text-center">
           <input
             type="text"
             placeholder="Enter your address"
@@ -27,7 +27,7 @@ const Delivery = () => {
           />
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300"
+            className="w-full border-2 text-white py-3 rounded-md hover:bg-black transition duration-300"
           >
             Request Delivery
           </button>
