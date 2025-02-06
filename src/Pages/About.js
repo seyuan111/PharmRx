@@ -1,28 +1,38 @@
-import React, {useState} from 'react'
-import { Link } from "react-router-dom";
-import Medications from '../assets/Medications.jpg'
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import NavBar from '../components/Navbar'
+import React from 'react';
+import Medications from '../assets/Medications.jpg';
+import NavBar from '../components/Navbar';
 
 const About = () => {
-    const [nav, setNav] = useState(false)
-    const handleNav = () => {
-        setNav(!nav)
-    }
   return (
-<div className="w-full h-[75px] bg-gray-200">
-    <NavBar />
+    <div className="w-full min-h-screen">
+      <NavBar />
+      
+      {/* Centered Box Layout */}
+      <div className="flex justify-center items-center min-h-screen px-4">
+        <div className="w-full max-w-5xl bg-white shadow-xl rounded-xl overflow-hidden flex flex-col md:flex-row animate-fade-in">
+          
+          {/* Left Side - Image */}
+          <div className="md:w-1/2">
+            <img 
+              src={Medications} 
+              alt="Medications" 
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-    <div className="w-full h-screen top-[90px] bg-zinc-900/70">
-    <img src={Medications} className="w-full h-full object-cover absolute -z-10" />
-    <div className="w-full h-[90%] text-center flex flex-col justify-center items-center text-white px-4">
-      <h1 className="text-2xl">Welcome to PharmRx</h1>
-      <p className="mt-5 text-white text-[20px] text-bold">We have been opening for very long. We serve patients with medications and Over the Counter. We also give flu shot and Shingle shots. Patients can also schedule their appointment on when to get vaccinated. We professionals work our best to serve our patients and satisfy them with their needs.</p>
+          {/* Right Side - Text Content */}
+          <div className="md:w-1/2 p-8 flex flex-col justify-center text-gray-800">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-teal-600">Welcome to PharmRx</h1>
+            <p className="text-lg leading-relaxed">
+              At <span className="font-semibold text-teal-500">PharmRx</span>, we have been proudly serving our patients for years, providing top-quality **medications** and **over-the-counter** products.  
+              <br /><br />
+              We offer flu shots and shingles vaccines, and you can schedule an appointment at your convenience. Our professional team is dedicated to **ensuring the best healthcare experience** for every patient.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+  );
+};
 
-</div>
-  )
-}
-
-export default About
+export default About;

@@ -7,18 +7,18 @@ const Navbar = () => {
   const handleNav = () => setNav(!nav);
 
   return (
-    <nav className="w-full border-b-2 bg-neutral-700 shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full border-b-2 border-black bg-neutral-200 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-[1240px] mx-auto px-6 flex justify-between items-center h-[70px]">
         {/* Logo */}
         <div className="flex items-center">
-            <AiOutlineMedicineBox className="text-white text-2xl mr-2" />
-            <h1 className="text-2xl font-bold text-white">
+            <AiOutlineMedicineBox className="text-2xl mr-2" />
+            <h1 className="text-2xl font-bold">
             <Link to="/">PharmRx</Link>
             </h1>
         </div>
 
         {/* Center Menu */}
-        <div className="hidden md:flex flex-1 justify-center space-x-6 text-gray-300 font-medium">
+        <div className="hidden md:flex flex-1 justify-center space-x-6 font-medium">
           <Link to="/about" className="hover:text-white transition duration-300">
             About
           </Link>
@@ -49,9 +49,9 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="md:hidden" onClick={handleNav}>
           {nav ? (
-            <AiOutlineClose size={30} className="text-gray-300" />
+            <AiOutlineClose size={30} />
           ) : (
-            <AiOutlineMenu size={30} className="text-gray-300" />
+            <AiOutlineMenu size={30} />
           )}
         </div>
       </div>
@@ -81,19 +81,19 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <li>
+          <li className="bg-black">
             <Link
               to="/login"
-              className="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-300"
+              className="text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-300"
               onClick={handleNav}
             >
               Sign In
             </Link>
           </li>
-          <li>
+          <li className="bg-black">
             <Link
               to="/checkout"
-              className="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-300"
+              className="text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-300"
               onClick={handleNav}
             >
               Checkout

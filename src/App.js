@@ -6,6 +6,7 @@ import Prescriptions from './components/Prescriptions';
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
 import Sliders from './components/Sliders'
+import Reviews from './components/Reviews'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Sliders />
       <Prescriptions />
       <Newsletter />
+      <Reviews />
       <Footer />
     </div>
   );

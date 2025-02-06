@@ -1,33 +1,52 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import Medications from '../assets/Medications.jpg';
 import NavBar from '../components/Navbar';
 
 const Login = () => {
   return (
-    <div className="w-full h-screen flex flex-col">
+    <div className="w-full min-h-screen flex flex-col">
       <NavBar />
-      <div className="p-12 relative flex-1 flex items-center justify-center bg-zinc-900/80">
-        <img className="absolute inset-0 w-full h-full object-cover mix-blend-overlay -z-10" src={Medications} alt="Medications" />
-        <div className="mt-20 border-2 shadow-lg rounded-lg p-8 w-full max-w-md">
-          <h2 className="md:text-3xl text-2xl font-bold text-center text-white">PharmRx Login</h2>
-          <form className="mt-6">
-            <div className="flex flex-col mb-4">
-              <label className="mb-2 text-white">Username:</label>
-              <input className="border border-gray-300 rounded-md p-2" type="text" placeholder="Enter your username" />
+      <div className="relative flex-1 flex items-center justify-center px-4 py-10 sm:px-6 lg:px-8">
+        {/* Login Form Container */}
+        <div className="bg-white/20 border border-white/50 backdrop-blur-lg shadow-xl rounded-xl p-8 w-full max-w-md animate-fade-in">
+          <h2 className="text-3xl font-bold text-center mb-6">Welcome Back</h2>
+
+          {/* Login Form */}
+          <form className="space-y-5">
+            <div className="flex flex-col">
+              <label className="mb-1 font-semibold">Username</label>
+              <input 
+                className="bg-white/20 border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                type="text"
+                placeholder="Enter your username"
+              />
             </div>
-            <div className="flex flex-col mb-4">
-              <label className="mb-2 text-white">Password:</label>
-              <input className="border border-gray-300 rounded-md p-2" type="password" placeholder="Enter your password" />
+            <div className="flex flex-col">
+              <label className="mb-1 font-semibold">Password</label>
+              <input 
+                className="bg-white/20 border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                type="password"
+                placeholder="Enter your password"
+              />
             </div>
-            <button className="w-full py-3 mt-6 hover:bg-black text-white font-semibold rounded-md transition duration-300">Sign in</button>
-            <div className="flex items-center justify-between mt-4">
-              <input className="mr-2" type="checkbox" />
-              <p className="text-white">Remember this account</p>
-              <p className="text-neutral-400">Forgot password?<Link to="" className="ml-2">Change</Link></p>
+
+            {/* Sign In Button */}
+            <button className="w-full py-3 mt-4 bg-black text-white font-semibold rounded-md shadow-md hover:bg-gray-900 transition duration-300">
+              Sign in
+            </button>
+
+            {/* Remember Me & Forgot Password */}
+            <div className="flex items-center justify-between text-sm mt-4">
+              <div className="flex items-center">
+                <input className="mr-2" type="checkbox" />
+                <p>Remember me</p>
+              </div>
+              <Link to="" className="hover:underline">Forgot password?</Link>
             </div>
-            <p className="mt-4 text-center text-neutral-400">
-              Don't have an account? <Link to="/signup" className="text-white hover:underline">Sign up</Link>
+
+            {/* Sign Up Link */}
+            <p className="mt-6 text-center">
+              Don't have an account? <Link to="/signup" className="hover:underline">Sign up</Link>
             </p>
           </form>
         </div>
@@ -37,3 +56,4 @@ const Login = () => {
 };
 
 export default Login;
+

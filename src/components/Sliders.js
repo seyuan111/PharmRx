@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
 const Sliders = () => {
@@ -18,50 +18,52 @@ const Sliders = () => {
   ];
 
   const prevSlide = () => {
-    const goBack = current === 0;
-    const prevSlide = goBack ? slides.length - 1 : current - 1;
-    setCurrent(prevSlide);
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    const forward = current === slides.length - 1;
-    const nextSlide = forward ? 0 : current + 1;
-    setCurrent(nextSlide);
-  };
-
-  const dotSlides = (sushi) => {
-    setCurrent(sushi);
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <div className="bg-neutral-600">
-      <div className="h-[600px] py-10 w-full m-auto relative group">
+    <div className="w-full bg-gray-100 flex justify-center items-center py-10">
+      <div className="relative w-full max-w-4xl h-[500px] rounded-lg overflow-hidden shadow-lg">
+        
+        {/* Slide Image */}
         <div
           style={{ backgroundImage: `url(${slides[current].src})` }}
-          className="w-full h-full bg-contain bg-no-repeat bg-center duration-300"
+          className="w-full h-full bg-cover bg-center transition-all duration-700 ease-in-out"
         ></div>
 
-        <div
+        {/* Left Arrow */}
+        <button 
           onClick={prevSlide}
-          className="cursor-pointer absolute transition-x-0 transition-y-[50%] top-[50%] text-white left-10"
+          className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition"
         >
-          <BsArrowLeftCircle size={30} />
-        </div>
+          <BsArrowLeftCircleFill size={20} />
+        </button>
 
-        <div
+        {/* Right Arrow */}
+        <button 
           onClick={nextSlide}
-          className="cursor-pointer absolute transition-x-0 transition-y-[50%] top-[50%] text-white right-10"
+          className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition"
         >
-          <BsArrowRightCircle size={30} />
-        </div>
+          <BsArrowRightCircleFill size={20} />
+        </button>
 
-        <div className="flex justify-center text-white my-2">
-          {slides.map((slide, index) => (
-            <div key={index} onClick={() => dotSlides(index)} className="text-2xl cursor-pointer">
-              <RxDotFilled />
+        {/* Dot Indicators - Back to Original Style */}
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-1">
+          {slides.map((_, index) => (
+            <div 
+              key={index} 
+              onClick={() => setCurrent(index)} 
+              className="text-lg text-white cursor-pointer"
+            >
+              <RxDotFilled className={current === index ? 'text-gray-100' : 'text-gray-400'} />
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );

@@ -26,8 +26,7 @@ const Vaccination = () => {
 
       {/* Background Image with Overlay */}
       <div className="relative w-full h-screen flex items-center justify-center px-4">
-        <img src={Medications} className="w-full h-full object-cover absolute top-0 left-0 -z-10" />
-        <div className="absolute top-0 left-0 w-full h-full bg-black/60 -z-10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 -z-10" />
 
         {/* Form Section */}
         <div className="bg-white/60 p-4 sm:p-6 md:p-8 rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg text-center mt-10">

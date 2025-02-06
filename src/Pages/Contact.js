@@ -4,13 +4,13 @@ import Medications from '../assets/Medications.jpg'
 
 const Contact = () => {
   return (
-    <div className="bg-neutral-500 min-h-screen">
+    <div className="min-h-screen">
       <NavBar />
 
-      <div className="w-full min-h-screen flex flex-col justify-center items-center px-6 pt-24 bg-zinc-900/70">
+      <div className="w-full min-h-screen flex flex-col justify-center items-center px-6 pt-24">
         <h1 className="text-4xl font-bold text-white mb-6 text-center">Contact for Help</h1>
         
-        <div className="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
+        <div className="bg-neutral-300 shadow-lg rounded-lg p-6 max-w-md w-full text-center">
           <p className="text-lg font-semibold text-gray-700">📞 Phone: <span className="text-blue-600">444-555-6666</span></p>
           <p className="text-lg font-semibold text-gray-700 mt-3">📠 Fax: <span className="text-blue-600">222-333-4444</span></p>
           <p className="text-lg font-semibold text-gray-700 mt-3">🕒 Store Hours:</p>

@@ -1,46 +1,74 @@
-import React from 'react'
-import {CiDeliveryTruck} from 'react-icons/ci'
-import {BiTransfer} from 'react-icons/bi'
-import {FcPhoneAndroid} from 'react-icons/fc'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { CiDeliveryTruck } from 'react-icons/ci';
+import { BiTransfer } from 'react-icons/bi';
+import { FcPhoneAndroid } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const Prescriptions = () => {
   return (
-    <div className="max-w-[1240px] bg-neutral-700 mx-auto px-4 py-16 text-white text-center">
-        <h1 className="py-4">Prescriptions provided how and when you need them</h1>
-        <p className="py-4 text-2xl">Choose an option</p>
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-4">
-            
-            <div className="flex flex-col border-[5px] rounded-lg py-12 px-8">
-                <div>
-                <div className="inline-flex text-[40px]"><CiDeliveryTruck /></div>
-                <h2 className="text-[25px] py-4">Have your medications delivered</h2>
-                <p className="mb-10">click here and follow the steps to have your medications delivered to your home.</p>
-                <button className="text-white"><Link to="/delivery">Click Here</Link></button>
-                </div>
-            </div>
+    <div className="max-w-[1240px] mx-auto px-6 py-16 text-black text-center">
+      <h1 className="text-4xl font-extrabold animate-fade-in">
+        Get Your Prescriptions The Way You Want
+      </h1>
+      <p className="text-xl mt-4 opacity-90 animate-slide-up">Choose the option that works best for you</p>
 
-            <div className="flex flex-col border-[5px] rounded-lg py-12 px-8">
-                <div>
-                <div className="inline-flex text-[40px]"><FcPhoneAndroid /></div>
-                    <h2 className="text-[25px] py-4">Order over the counter medications</h2>
-                    <p className="mb-10">Click here to order your over the counter medications.</p>
-                    <button className="text-white"><Link to='shop'>Click Here</Link></button>
-                </div>
-            </div>
-
-            <div className="flex flex-col border-[5px] rounded-lg py-12 px-8">
-                <div>
-                <div className="inline-flex text-[40px]"><BiTransfer /></div>
-                    <h2 className="text-[25px] py-4">Have your Prescriptions Transferred</h2>
-                    <p className="mb-10">click here and follow the steps to have your Rx transferred.</p>
-                    <button className="text-white">Click here</button>
-                </div>
-            </div>
-
+      {/* Cards */}
+      <div className="mt-12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        {/* Delivery Card */}
+        <div className="relative bg-neutral-600/90 border border-gray-600 rounded-xl p-8 text-center shadow-lg transition transform hover:scale-105 hover:shadow-2xl">
+          <div className="justify-center items-center text-[50px] text-teal-400 mx-auto">
+            <CiDeliveryTruck />
+          </div>
+          <h2 className="text-white text-2xl font-bold mt-4">Home Delivery</h2>
+          <p className="mt-3 text-gray-300">
+            Get your medications delivered right to your doorstep with ease.
+          </p>
+          <Link
+            to="/delivery"
+            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 transition duration-300 shadow-lg"
+          >
+            Get Started
+          </Link>
         </div>
-    </div>
-  )
-}
 
-export default Prescriptions
+        {/* Over-the-Counter Card */}
+        <div className="relative bg-neutral-600/90 border border-gray-600 rounded-xl p-8 text-center shadow-lg transition transform hover:scale-105 hover:shadow-2xl">
+          <div className="text-[50px] text-blue-400 mx-auto">
+            <FcPhoneAndroid />
+          </div>
+          <h2 className="text-white text-2xl font-bold mt-4">Over-the-Counter</h2>
+          <p className="mt-3 text-gray-300">
+            Order non-prescription medications quickly and conveniently.
+          </p>
+          <Link
+            to="/shop"
+            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 transition duration-300 shadow-lg"
+          >
+            Order Now
+          </Link>
+        </div>
+
+        {/* Transfer Prescription Card */}
+        <div className="relative bg-neutral-600/90 border border-gray-600 rounded-xl p-8 text-center shadow-lg transition transform hover:scale-105 hover:shadow-2xl">
+          <div className="text-[50px] text-yellow-400 mx-auto">
+            <BiTransfer />
+          </div>
+          <h2 className="text-white text-2xl font-bold mt-4">Transfer Prescription</h2>
+          <p className="mt-3 text-gray-300">
+            Easily transfer your prescriptions to our pharmacy hassle-free.
+          </p>
+          <Link
+            to="/transfer"
+            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 transition duration-300 shadow-lg"
+          >
+            Transfer Now
+          </Link>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Prescriptions;
