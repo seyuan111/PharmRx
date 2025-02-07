@@ -41,7 +41,17 @@ const Reviews = () => {
           <SwiperSlide key={index}>
             <div className="bg-white p-6 shadow-md rounded-lg text-center">
               <p className="text-lg italic text-gray-700 mb-4">“{review.quote}”</p>
-              <h3 className="text-md font-semibold text-gray-900">{review.name}</h3>
+
+              {/* Avatar & Name Container */}
+              <div className="flex items-center justify-center gap-4">
+                <img 
+                  src={`https://i.pravatar.cc/100?img=${index + 1}`} 
+                  alt={review.name} 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <h3 className="text-md font-semibold text-gray-900">{review.name}</h3>
+              </div>
+
             </div>
           </SwiperSlide>
         ))}

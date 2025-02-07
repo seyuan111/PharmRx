@@ -13,17 +13,17 @@ const SignUp = () => {
             <div className="relative flex-1 flex items-center justify-center">
 
                 {/* SignUp Form Container */}
-                <div className="bg-white/10 border border-white/20 backdrop-blur-lg shadow-xl rounded-xl p-10 w-full max-w-md animate-fade-in">
+                <div className="m-20 bg-neutral-500/20 border border-white/20 backdrop-blur-lg shadow-xl rounded-xl p-12 w-full max-w-md animate-fade-in">
                     <BiArrowBack onClick={() => navigate(-1)} className="cursor-pointer text-2xl mb-4 hover:scale-110 transition" />
                     
-                    <h2 className="text-3xl font-bold text-center mb-6">Create an Account</h2>
+                    <h2 className="md:text-3xl text-2xl font-bold text-center mb-6">Create an Account</h2>
 
                     {/* Sign Up Form */}
                     <form className="space-y-5">
                         <div className="flex flex-col">
                             <label className="mb-1 font-semibold">Email</label>
                             <input 
-                                className="bg-white/20 border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                                className="bg-white border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
                                 type="email"
                                 placeholder="Enter your email"
                             />
@@ -31,7 +31,7 @@ const SignUp = () => {
                         <div className="flex flex-col">
                             <label className="mb-1 font-semibold">Username</label>
                             <input 
-                                className="bg-white/20 border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                                className="bg-white border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
                                 type="text"
                                 placeholder="Enter your username"
                             />
@@ -39,7 +39,7 @@ const SignUp = () => {
                         <div className="flex flex-col">
                             <label className="mb-1 font-semibold">Password</label>
                             <input 
-                                className="bg-white/20 border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                                className="bg-white border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
                                 type="password"
                                 placeholder="Enter your password"
                             />
@@ -47,7 +47,7 @@ const SignUp = () => {
                         <div className="flex flex-col">
                             <label className="mb-1 font-semibold">Confirm Password</label>
                             <input 
-                                className="bg-white/20 border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                                className="bg-white border border-gray-300/50 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
                                 type="password"
                                 placeholder="Confirm your password"
                             />
