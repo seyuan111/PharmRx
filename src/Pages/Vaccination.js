@@ -72,7 +72,7 @@ const Vaccination = () => {
 
             <button
               type="submit"
-              className="bg-teal-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium hover:bg-teal-700 transition duration-300 w-full"
+              className="bg-gradient-to-b from-black to-gray-900 hover:bg-black text-white px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium hover:bg-teal-700 transition duration-300 w-full"
             >
               Schedule Appointment
             </button>

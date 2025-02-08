@@ -16,21 +16,31 @@ const Shop = () => {
     return (
         <div className="min-h-screen">
             <NavBar />
-            <div className="w-full min-h-screen p-8 pt-24">
-                <h1 className="text-3xl font-bold text-center mb-8">Shop here for our exclusive deals</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {products.map((product) => (
-                        <div key={product.id} className="border p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 bg-neutral-200/70">
-                            <img src={product.image} alt={product.name} className="w-full h-40 object-cover mb-4 rounded-md" />
-                            <h2 className="text-xl font-semibold">{product.name}</h2>
-                            <p className="text-gray-700">{product.price}</p>
-                            <button className="border-2 border-black mt-4 py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300">Add to Cart</button>
+            <div className="w-full min-h-screen p-8 pt-12">
+
+                {["OTC Medications", "Hygiene Care Products", "Bathroom Care Products"].map((category, index) => (
+                    <div key={index} className="mt-16">
+                        <h2 className="text-2xl font-bold text-center mb-6 border-b-4 pb-2 w-fit mx-auto">
+                            {category}
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                            {products.map((product) => (
+                                <div key={product.id} className="border p-5 rounded-xl shadow-md hover:shadow-2xl transition duration-300 bg-white">
+                                    <img src={product.image} alt={product.name} className="w-full h-44 object-cover mb-4 rounded-lg" />
+                                    <h3 className="text-lg font-semibold">{product.name}</h3>
+                                    <p className="text-gray-600">{product.price}</p>
+                                    <button className="mt-4 py-2 px-5 border border-black rounded-lg hover:bg-black hover:text-white transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
 };
 
 export default Shop;
+

@@ -7,7 +7,7 @@
         @apply text-3xl font-bold
     }
     li {
-        @apply px-4 border-2 hover:bg-black py-3 rounded-2xl
+        @apply px-4 border-2 py-3 rounded-2xl
     }
     button {
         @apply border-2 px-5 py-3 rounded-2xl

@@ -12,6 +12,7 @@ import Login from './Pages/Login'
 import Signup from './Pages/SignUp'
 import Delivery from './Pages/Delivery'
 import Checkout from './Pages/Checkout'
+import Cart from './Pages/Cart'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: "signup",
     element: <Signup />
+  },
+  {
+    path: "cart",
+    element: <Cart />
   }
 ]);
 

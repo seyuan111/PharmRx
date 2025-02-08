@@ -26,7 +26,7 @@ const Prescriptions = () => {
           </p>
           <Link
             to="/delivery"
-            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 transition duration-300 shadow-lg"
+            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-b from-black to-gray-900 hover:bg-black text-white transition duration-300 shadow-lg"
           >
             Get Started
           </Link>
@@ -43,7 +43,7 @@ const Prescriptions = () => {
           </p>
           <Link
             to="/shop"
-            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 transition duration-300 shadow-lg"
+            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-b from-black to-gray-900 hover:bg-black text-white transition duration-300 shadow-lg"
           >
             Order Now
           </Link>
@@ -60,7 +60,7 @@ const Prescriptions = () => {
           </p>
           <Link
             to="/transfer"
-            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 transition duration-300 shadow-lg"
+            className="inline-block mt-6 px-6 py-3 text-lg font-semibold rounded-lg bg-gradient-to-b from-black to-gray-900 hover:bg-black text-white transition duration-300 shadow-lg"
           >
             Transfer Now
           </Link>

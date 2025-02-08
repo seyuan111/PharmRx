@@ -23,11 +23,11 @@ const Checkout = () => {
   };
 
   return (
-    <div className="bg-neutral-600 min-h-screen">
+    <div className="bg-neutral-400 min-h-screen">
       <NavBar />
       <div className="max-w-lg mx-auto p-4 md:p-6 bg-white shadow-lg rounded-lg mt-10">
+      <div className="m-10">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center">Checkout</h1>
-
         {/* Billing & Shipping Information */}
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col">
@@ -145,6 +145,7 @@ const Checkout = () => {
             Place Order
           </button>
         </form>
+      </div>
       </div>
     </div>
   );
